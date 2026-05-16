@@ -1,0 +1,125 @@
+/* Aula 1  - CSS Para página de boas vindas
+
+Metodologia: MOBILE-FIRST 
+-Estilos base são otimizados para CELULARES (Viewport pequenos
+-Telas Maiores receebem ajustes via Medua Queries
+-Garante boas expêriencias em qualquer dispositivo
+
+Estrutura do CSS:
+Estilos Globais (Body, Fontes)
+Estilos do Header (Cabeçalho)
+Estilos do Main (Conteudo Principal)
+Estilos dos Elementos ( img, p , buttons)
+Media Queries para Desktop (ao final) */
+
+
+
+/* estilos globais (base Mobile) */
+
+*{  /*Pega toda a página, retira o CSS padrão do Navegador*/
+    margin: 0;
+    padding: 0;
+}
+
+body
+    {
+        font-family: Arial, Helvetica, sans-serif; /*Define a familia de fontes padrão para da a página*/
+        background-color: grey ; /*Define a cor do fundo da página*/
+        color: white ; /* Define a cor da fonte */
+        margin: 0; /*espaçamento externo do elemento*/
+        padding: 0; /*Espaçamento Interno do elemento*/
+        text-align: center; /*alinha o texto ao cento*/
+    }
+
+header
+    {
+        background-color: black ; /*Define a cor de fundo do cabeçalho*/
+        color: white; /*Define a cor da fonte, adicionado para consistência*/
+        padding: 30px 15px; /*Define o espaçamento interno do cabeçalho*/
+        margin: 0px 0px; /*define a margem do fundo do cabeçalho*/
+    }
+
+main
+    {
+        padding: 50px 50px; /*define o espaçamento interno do elemento*/
+    }
+
+/* Estilo para cada elemento individual */
+
+img /* Estilo da Imagem */
+    {
+        margin: 5px 5px; /*Espaço entre borda da página e imagem*/
+        width: 100%; /*largura*/
+        max-width: 300px; /*Largura máxima, se mantem igual para telas maiores*/
+        border-radius: 10px; /*Arredonda as bordas*/
+        border: 0px solid black; /*Define uma borda para a imagem, util se o fundo da imagem for igual ao da página. solid deixa a borda mais visivel */
+        margin-bottom: 10px; /*define a margem entre o texto abaixo e a imagem*/
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) /*cria uma sombra para a imagem*/
+    }
+p /*estilo dos parágrafos*/
+    {
+        font-size: 1rem; /*tamanho da fonte*/
+        color: white; /*cor da fonte*/
+        margin-bottom: 30px; /*margem da parte de baixo*/
+        line-height: 1.4; /*distância entre as linhas*/
+    }
+
+a.button /*estilo do botão*/ 
+    {
+        display: block; /*o display block faz o link ocupar toda a largura disponivel*/
+        background-color: rgb(59, 59, 59); /*cor de fundo do botão*/
+        color: white; /*cor da fonte*/
+        padding: 15px; /*espaçamento externo*/
+        text-decoration: none; /*remove a decoração (sublinhado)*/
+        border-radius: 5px; /*arredonda as bordas*/
+        font-weight: bold; /*peso da fonte (grossura)*/
+        transition: background-color 0.3s ease; /*transição suave da cor de fundo*/
+        border: solid 2px black /*cria uma borda para o botão*/
+    }
+
+footer /*estilo do rodapé*/
+    {
+        background-color: black; /*cor de fundo*/
+        color: white; /*cor da fonte*/
+        padding: 20px 0px; /*espaçamento interno*/
+        width: 100%; /*largura*/
+        bottom: 0;
+    }
+h1 /*estilo do titulo*/
+{
+    font-size: 1.8rem; /*Tamanho de fonte (1.8rem = 28.8px)*/
+    font-weight: 700; /*Peso da fonte (Grossura)*/
+}
+
+/*Media Query: Para telas maiores (Desktop)*/
+
+@media (min-width:768px) 
+    {
+    h1 
+        {
+            font-size: 2.5rem; /*tamanho da fonte do titulo*/
+        }
+
+    p 
+        {
+            font-size: 1.2rem; /*tamanho da fonte*/
+            max-width: 600px; /*maximo de largura*/
+            margin: 0 auto 30px; /*ajustando espaçamento externo*/
+         }    
+    
+    a.button
+        {
+            display: inline-block; /*botão volta a ser pequeno para desktop*/
+            padding: 15px 40px; /*espaçamento interno*/
+        }
+    footer
+        {
+            position: fixed; /*posicionamento do elemento fixado*/
+            bottom: 0; /*espaçamento embaixo do elemento, zero faz não ter espaço*/
+        }
+    }
+
+
+
+
+/**/
