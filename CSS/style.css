@@ -99,13 +99,12 @@ h1 /*estilo do titulo*/
         {
             font-size: 2.5rem; /*tamanho da fonte do titulo*/
         }
-
     p 
         {
             font-size: 1.2rem; /*tamanho da fonte*/
             max-width: 600px; /*maximo de largura*/
             margin: 0 auto 30px; /*ajustando espaçamento externo*/
-         }    
+        }    
     
     a.button
         {
