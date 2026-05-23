@@ -1,0 +1,63 @@
+/* Aula 3 - CSS para página de receita
+tópicos principais
+1. estilos globais
+2.contau=iner de receitas
+3. titulos e seções
+4. lists flexiveis
+5. tabelas responsivas
+6. media queries */
+
+
+*{ /* Altera o CSS padrão do navegador */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: beige;
+        padding: 15px;
+        color: indianred;
+    }
+
+.recipe-container
+    {
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
+    }
+h1
+    {
+        text-align: center;
+        color: black;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+/* listas flexiveis */
+.flex-list
+    {
+        display: flex; /* ativa o modelo flexbox para esse elemento */
+        flex-direction: column; /* torna a lista vertical (coluna: item empilhados| row: items lado a lado) */
+        gap: 5px; /* espaço entre as linhas da lista */
+        list-style: none; /* remove o ponto no começo de cada linha */
+    }
+
+.flex-list li
+    {
+        background-color: rgb(234, 208, 173); /* muda a cor do fundo */
+        border-radius: 10px; /* arredonda as bordas */
+        padding: 14px; /* adiciona espaçamento interno */
+        text-align: center; /* alinha os ingredientes ao centro */
+    }
+/* seções */
+.info
+    {
+        overflow: auto; /* Se a tela for muito larga , permite o scroll lateral */
+
+    }
+
+
+/*  */

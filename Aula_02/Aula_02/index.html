@@ -1,0 +1,26 @@
+<!-- aula 02: criar um cartão de produtos responsivo usando CSS FlexBox e estilos avançados -->
+<html lang="pt-br">
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de "card"</title>
+    <link rel="stylesheet" href="/Aula_02/Aula_02/style.css">
+</head>
+<body> <!-- área do conteúdo principal -->
+    <main> <!-- container principal /// div wrapper usada para centralizar o cartão na página /// o CSS (display:flex) vai centralizar este elemento -->
+        <div class="container"> <!-- Cartão de produto /// estrutura que contm: imagem, titulo, descrição, preço e botão de compra /// este é um padrão comum em e-commerce -->
+            <div class="product-card">
+                 <img src="/Aula_02/Aula_02/img/windows background.webp" alt="windows 10 home screen"> <!-- src: URL da imagem /// alt: texto alternativo (importante para acessibilidade e SEO) -->
+                    <div class="card-content"> <!-- conteúdo interno do cartão -->
+                        <h3>Windows 11 home </h3> <!-- Titulo do produto -->
+                        <p>Windows 11 home, para uso em computadores pessoais, com todas ao mais novas tecnologias windows</p> <!-- Descrição do produto -->
+                        <span class="price">RS500,00</span>
+                        <a href="#" class="buy-button"> Adicionar ao carrinho</a>
+                    </div>  <!-- fecha div card content -->
+            </div> <!-- Imagem do produto -->
+         </div> <!-- fecha div container -->
+    </main>
+</body>
+</html>
+<!--  -->

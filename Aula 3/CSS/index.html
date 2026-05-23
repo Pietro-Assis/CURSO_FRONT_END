@@ -1,0 +1,60 @@
+<!-- aula 03, receita e FlexBox
+usando flexbox de forma avançada  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receita de bolo</title>
+    <link rel="stylesheet" href="/Aula 3/CSS/Style.css">
+</head>
+
+<body>
+    <div class="recipe-container"> <!-- div wrapper que centraliza todo o conteúdo da receita -->
+        <h1>Bolo de cenoura com chocolate</h1> <!-- Titulo principal -->
+        <section class="ingredientes"> <!-- seção de ingredientes /// tag semântica agrupa conteúdos temáticos relacionados -->
+            <h2>Ingredientes</h2> <!-- subtitulo de seção -->
+            <ul class="flex-list"> <!-- lista flexivel de ingredientes /// utiliza css flexbox para mudar layout conforme a tela / mobile: items em coluna / desktop: items em linha /// ul - cria listas não ordenadas-->
+                <li>3 cenouras</li>
+                <li>1 xicara de óleo</li>
+                <li>3 ovos</li>
+                <li>2 xicaras de açucar</li>    <!-- li são os componentes da lista -->
+                <li>2 xicaras de fermento</li>
+                <li>1 colher de fermento</li>
+            </ul>
+        </section>
+        <section class="info"> <!-- seção semântica para dados tabulares -->
+            <h2>informações nutricionais</h2>
+
+            <!-- TABELA RESPONSIVA -->
+            <!-- Tabela que exibe os nutrientes e quantidade
+            no CSS, aplica scroll orizontal se necessário -->
+
+            <table> <!-- tabela: usada para organizar dados em linhas e colunas -->
+                <thead> <!-- Thead: cabeçalho da tabela -->
+                    <tr> <!-- TR (table row) cria uma linha -->
+                        <th>Nutriente</th><th>Quantidade</th> <!-- Table header (TH) célula do titulo (em negrito por padrão) definindo o nome da coluna -->
+                    </tr>
+                </thead>
+                <tbody> <!-- tbody: representa o corpo da tabela (onde ficam os dados) -->
+                    <tr>
+                        <td>Calorias</td> <!-- TD (table data) conteúdo da tabela -->
+                        <td>320 kcal</td>
+                    </tr>
+                    <tr>
+                        <td>açucar</td>
+                        <td>25g</td>
+                    </tr>
+                    <tr>
+                        <td>gorduras</td>
+                        <td>12g</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
+<!--  -->
