@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 - layout</title>
+    <link rel="stylesheet" href="/Aula 5/CSS/Style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">tecnews</div>
+        <!-- menu de navegação -->
+        <nav> <!-- tag "nav" é semântica e indica área de navegação -->
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">gadgets</a></li>
+                <li><a href="#">software</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+<div class="layout-wrapper"> <!-- Wrapper do layout ( flex:colum no mobile e row no desktop) -->
+    <main> <!-- seção semântica pra conteúdo principal -->  <!-- conteúdo principal -->
+        <article class="post"> <!-- artigo (article) --> <!-- tag semântica indica um artigo/post independente -->
+            <h1>o futuro da inteligencia artificial em 2026</h1>
+            <img src="/Aula 5/img/image.png" alt="Imagem de um robo">
+            <p>a inteligencia artificial atingiu um novo patamar de integração no cotidiano</p>
+            <p>novos modelos multimodais permitem interações naturais e eficientes</p>
+        </article>
+    </main>
+    <aside class="sidebar"> <!-- Barra lateral (Aside/Sidebar)--> <!-- secção semântica para conteudos secundarios -->
+        <h3>mais lidas</h3>
+        <ul class="sidebar-list"> <!-- lista de artigos relacionados -->
+            <li><a href="#">lançamento do novo iphone</a></li>
+            <li><a href="#">Dicas de CSS Grid</a></li>
+            <li><a href="#">O Que é Web3?</a></li>
+    
+        </ul>
+    </aside>
+</div>
+<footer class="main-footer">
+    <p>&copy; 2026 tecnews - todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
+
+
+<!--  -->
