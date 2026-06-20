@@ -15,6 +15,9 @@ body
 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-header
@@ -25,6 +28,7 @@ body
     text-align: center;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo 
@@ -32,7 +36,7 @@ body
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     
 }
@@ -45,7 +49,22 @@ nav ul
     align-items: center;
     padding: 0;
     gap: 30px;
+    font-family: 'Courier New', Courier, monospace;
 }
+.sidebar-list li
+{
+    color: black;
+    list-style-type:decimal;
+    width: 100%;
+}
+.sidebar-list a
+{
+    font-size:x-large;
+    font-weight: bolder;
+    width: 100%;
+    text-decoration: none;
+}
+
 
 nav a
 {
@@ -53,7 +72,91 @@ nav a
     font-size: 1.2rem;
     text-decoration: none;
 }
+
+.layout-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+}
+
+.post 
+{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
 .post img
 {
     width: 100%;
+    height: auto;
+    border-radius: 15px;
+    
 }
+
+.post p
+{
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.content
+{
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 00000, 0000, 1);
+}
+
+.sidebar
+{
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 00000, 0000, 1);
+}
+
+
+.main-footer
+{
+    text-align: center;
+    padding: 30px;
+    background: rgba(42, 42, 42, 1);
+    color: white;
+    font-size: 1.5rem;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: 992px)
+{
+    .main-header
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 100px;
+        text-align: left;
+    }
+    .layout-wrapper
+    {
+        flex-direction: row;
+        margin: 40px auto;
+        max-width: 1100px;
+    }
+    /* Content ocupa 75% do espaço com (flex 3) */
+    .content
+    {
+        flex: 3; /* flex 3: se sidebar é 1, o content será 3 vezes maior, proporção 3:1 = 75%-25% */
+    }
+    .sidebar
+    {
+        flex: 1;
+    }
+    
+}
+
+
+/*  */
