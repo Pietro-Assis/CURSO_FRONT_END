@@ -1,0 +1,128 @@
+/* CSS Para galeria responsiva
+tópicos principais 
+- grid responsavel com flex box
+- overlay com posição absoluta
+- object-fit para imagens
+- animações apenas para desktop
+- multiplas media queries */
+/*  */
+/* ---------------------------------------------------------------------------------------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: white;
+    padding: 30px 15px;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+h1
+{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 17.5px;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+.grid
+{ /* Criar um grid com flexwrap, este é um padrão para criar grids responsiveis sem CSS GRID */
+    display: flex;   
+    flex-wrap: wrap; /* quebra linha quando items não cabem */
+    gap: 15px;
+    justify-content: center; 
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+.item /* Itens da galeria */
+{
+    /* Position: relative
+    Cria um elemento de posicionamento */
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* garante que as imagens/overlays não vazem para fora das bordas */
+    border-radius: 10px;
+    /* padding: 7.5px; */
+    
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+.item img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* object fit faz imagem preencher o espaço sem distorcer ela (extremamente util para imagensminusculas ou gigantes), se necessário, corta as imagens nas laterais. */
+    border-radius: 10px;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+.overlay /* overlay: camada de texto sobre a imagem */
+{
+    position: absolute; /* Postion absolute posiciona o texto sobre a imagem quando o pai estiver em posição relativa e o pai do pai tiver flex */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* fundo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+/* Media query para tablets (600px+) */
+@media (min-width: 600px)
+{
+    .item
+    {
+        /* calc(50% - 15) 
+        -50% da largura
+        -15px (metade do gap de 30) para não exceder a largura
+        -resultado */
+        width: calc(50% - 15px); 
+    }
+    
+}
+@media (min-width: 1000px)
+{
+    body
+    {
+        padding: 50px;
+    }
+/* ---------------------------------------------------------------------------------------------------------- */
+    h1 
+    {
+        font-size: 3rem;
+    }
+/* ---------------------------------------------------------------------------------------------------------- */
+    .item
+    {
+        width: calc(33.333% - 15px);
+    }
+/* ---------------------------------------------------------------------------------------------------------- */
+    .item img
+    {   /* define a transição 0.5s para a a propriedade transform */   
+        transition: transform 0.5s ease;
+    }
+/* ---------------------------------------------------------------------------------------------------------- */
+    /* efeito hover (zoom) na imagem de 10% */
+    .item:hover img 
+    {
+        transform: scale(1.1);
+    }
+/* ---------------------------------------------------------------------------------------------------------- */    
+    .overlay
+    {
+        opacity: 0; 
+        transition: opacity 0.3s ease; /* transição suave */
+        background: rgba(000,000000, 0000, 0000.7); /* fundo mais escuro no overlay */
+    }
+/* ---------------------------------------------------------------------------------------------------------- */
+    .item:hover .overlay /* overlay aparece ao passar o mouse no item */
+    {
+        opacity: 1; /* opacity: completamente visivel */
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
